@@ -1,4 +1,4 @@
-# L18-04
+# L11-02
 
 Let's deploy an Nginx container using both methods.
 

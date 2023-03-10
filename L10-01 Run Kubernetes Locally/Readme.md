@@ -1,4 +1,4 @@
-# L17-02
+# L10-01
 
 Let’s test our local Kubernetes installation.
 
