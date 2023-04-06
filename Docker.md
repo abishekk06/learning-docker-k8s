@@ -26,19 +26,19 @@ Container is a running instance of an image.
 
 To run a container,
 
-    '''
-    docker pull nginx  # pull an nginx image from docker hub
+'''
+docker pull nginx  # pull an nginx image from docker hub
 
-    docker images  # list all images
+docker images  # list all images
 
-    docker run nginx:latest  # run a container from the image nginx
+docker run nginx:latest  # run a container from the image nginx
 
-    docker run -d nginx:latest  # run container in detach mode
+docker run -d nginx:latest  # run container in detach mode
 
-    docker container ls  # list all running containers
+docker container ls  # list all running containers
 
-    docker ps  # list all running containers
-    '''
+docker ps  # list all running containers
+'''
 
 ### Exposing Ports:
 
@@ -52,25 +52,25 @@ Now a running nginx container with 80/tcp port exposed. This can be done while r
 
 ### Managing Containers:
 
-    '''
-    docker stop <container-id> or <container-name>  #stop running container
+'''
+docker stop <container-id> or <container-name>  # stop running container
 
-    docker start <container-id> or <container-name>  #start the stopped container
+docker start <container-id> or <container-name>  # start the stopped container
 
-    docker rm <container-id> or <container-name>  #  remove the container
+docker rm <container-id> or <container-name>  # remove the container
 
-    docker rm $(docker pd -aq)  # can remove all the stopped containers at once. -a shows stopped containers, --quite show Container IDs
+docker rm $(docker pd -aq)  # can remove all the stopped containers at once. -a shows stopped containers, --quite show Container IDs
 
-    docker run -d -p 3000:80 -p 8080:80 --name Marvel nginx:latest  # --name runs the container with name
+docker run -d -p 3000:80 -p 8080:80 --name Marvel nginx:latest  # --name runs the container with name
 
-    export FORMAT = "ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+export FORMAT = "ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 
-    docker ps --format=$FORMAT
+docker ps --format=$FORMAT
 
-    docker rm -f <container-name>  # removes the container forcefully.
+docker rm -f <container-name>  # removes the container forcefully.
 
-    docker exec -it website  bash  # connect to the container via bash
-    '''
+docker exec -it website  bash  # connect to the container via bash
+'''
 
 ## Volumes:
 
