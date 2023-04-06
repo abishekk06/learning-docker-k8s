@@ -18,8 +18,6 @@ Standard for software deployment
 
 Image is a template for creating an environment of your choice.
 
-Snapshot
-
 Has everything need to run your apps. i.e, OS, Software, App code.
 
 ## Container:
@@ -40,6 +38,7 @@ To run a container,
     docker container ls  # list all running containers
 
     docker ps  # list all running containers
+    '''
 
 ### Exposing Ports:
 
@@ -71,12 +70,13 @@ Now a running nginx container with 80/tcp port exposed. This can be done while r
     docker rm -f <container-name>  # removes the container forcefully.
 
     docker exec -it website  bash  # connect to the container via bash
+    '''
 
 ## Volumes:
 
-Allows sharing of data. 'Files' and 'Folders'
-Between 'host' and 'container'
-Between 'containers'
+Allows sharing of data. Files and Folders
+Between host and container
+Between containers
 
 ### Volumes(Host and Container):
 
@@ -98,7 +98,7 @@ Build own Images, [Dockerfile Reference](https://docs.docker.com/engine/referenc
 
 ### DockerFile for NodeApps:
 
-Reference: [NodeJs](https://nodejs.org/en/download/current) and [ExpressJs](https://expressjs.com/en/starter/installing.html)
+Reference: [Node Js](https://nodejs.org/en/download/current) and [Express Js](https://expressjs.com/en/starter/installing.html)
 
 Simple API for Hello World [here](https://expressjs.com/en/starter/hello-world.html)
 
